@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍽 وصفات أكل</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="nav">
+        <h1>🍽 وصفات</h1>
+        <div class="hamburger" id="hamburger">☰</div>
+        <ul class="menu" id="menu">
+          <li><button id="darkToggle">🌙 الوضع الليلي</button></li>
+        </ul>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="try: pixxa,chicken">
+        <button id="searchBtn">🔍</button>
+      </div>
+    </header>
+
+    <div class="loader" id="loader">⏳ جاري التحميل...</div>
+
+    <main id="results" class="results"></main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

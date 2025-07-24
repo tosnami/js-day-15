@@ -1,0 +1,151 @@
+:root {
+  --bg-color: #f7f9fc;
+  --text-color: #333;
+  --card-bg: white;
+  --primary: #4a90e2;
+}
+
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --card-bg: #2c2c2c;
+  --primary: #7abaff;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  padding: 12px;
+  font-size: 16px;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-content a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* loader */
+.loader {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.menu li button {
+  padding: 8px 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* responsive menu */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
